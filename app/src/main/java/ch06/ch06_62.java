@@ -19,7 +19,7 @@ public class ch06_62 {
     System.out.println("after change(d.x)");
     System.out.println("main : x = " + d.x);
   }
-  static void change(int x) {
+  static void change(int x) { // return으로 x값이 바뀌지 않았으므로 기본형 매개변수.
     x = 1000;
     System.out.println("change() : x = " + x);
   }
