@@ -2,7 +2,6 @@ package ch06;
 
 public class q0603 {
   public static void main(String[] arg) {
-
     Student s = new Student();
     s.name = "홍길동";
     s.ban = 1;
@@ -25,10 +24,12 @@ class Student {
   int math;
 
   int getTotal() {
-
+    return this.kor + this.eng + this.math;
   }
 
   float getAverage() {
-
+    float aver = (getTotal()/(float)3);
+    //return aver;
+    return (Math.round(aver*10)/10.0f);
   }
 }
