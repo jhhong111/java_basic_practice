@@ -1,0 +1,12 @@
+선영 16500원
+나머지 18000
+
+Ch11
+
+1~2 : 컬렉션프레임웍과 핵심 인터페이스 (119강)
+List : 순서가 있고 데이터의 중복 허용. 
+	- ArrayList, LinkedList, Stack, Vector
+Set : 순서가 없고 데이터의 중복 허용불가.
+	- HashSet, TreeSet
+Map : 순서가 없고 중복은 키는 불가하지만 값은 가능
+	- HashMap, TreeMap, Hashtable, Properties
