@@ -3,10 +3,95 @@
 
 Ch11
 
-1~2 : 컬렉션프레임웍과 핵심 인터페이스 (119강)
+
+
+1~2장
+컬렉션프레임웍과 핵심 인터페이스 (119강)
+
+*Collection (List+Set) / Map 은 독립적.
+
 List : 순서가 있고 데이터의 중복 허용. 
 	- ArrayList, LinkedList, Stack, Vector
 Set : 순서가 없고 데이터의 중복 허용불가.
 	- HashSet, TreeSet
 Map : 순서가 없고 중복은 키는 불가하지만 값은 가능
 	- HashMap, TreeMap, Hashtable, Properties
+
+
+
+3~6장
+Collection, List, Set, Map (120강)
+
+*Collection
+	추가(add, addAll) 삭제(remove, removeAll) 검색(contains, containsAll)
+
+* List 인터페이스. (extends Collection)
+	- 순서0, 중복0
+	- ArrayList(vector : 옛날방식), LinkedList 핵심
+	- 추가, 삭제, 정렬(sort), get 가져오는거, set 변경하는거, 검색(indexOf(왼>오), lastIndexOf(오>왼)), 
+	- 뽑아서 새로 만듬(subList)
+	- collection 인터페이스 메서드 제외.
+
+* Set 인터페이스 (extends Collection)
+	- 순서X, 중복X
+	- HashSet, SortedSet(TreeSet)
+	- boolean 합집합(addAll), 부분집합(containsAll), 차집합, 교집합
+
+* Map 인터페이스 
+	- 순서X, 중복(키X, 값O)
+	- Hashtable(HashMap의 옛날버전), HashMap(LinkedHashMap - 순서 O), SortedMap(TreeMap)
+	- 추가 (put, putAll) 삭제(remove) 검색(get, containsKey, containsValue)
+	- Map에 저장된 정보 읽기 (entrySet(키와 값의 한쌍), keySet, values)
+
+
+
+7~11 
+ArrayList (121강)
+> 객체만 저장 가능
+* ArrayList
+	- Vector(동기화O) / ArrayList(동기화 X)
+	- List 인터페이스를 구현하고 저장순서 O, 중복 O
+	- 데이터의 저장공간으로 배열을 사용함.(배열기반)
+
+* ArrayList.Method
+생성자
+	- ArrayList()
+	- ArrayList(Collection c) : Collection 형변환 사용할때
+	- ArrayList(int initialCapacity) : 배열의 길이를 넣어주는것
+정렬 
+	- Collections.sort()
+추가
+	- boolean add(객체)
+	- add(int index, 객체) : 어느 위치에 저장할지 지정.
+	- addAll(Col) 
+	- addAll(int, Col)
+삭제
+	- remove(Obj) // 객체로 삭제할것 아니면 index로 삭제될 수 있으니 주의
+	- remove(int)
+	- removeAll(Col)
+	- clear() : 모든 객체 삭제
+	- list1.contains(list2)
+검색
+	- indexOf(Obj) : 왼>오 / 못찾으면 -1 / 찾으면 인덱스 반환.
+	- lastIndexOf(Obj) : 오>왼
+	- contains(Obj)
+	- list1.retainAll(list2) : list1에서 list2와 겹치는 부분만 남기고 나머지는 삭제한다
+	- list1.containsAll(list2) : list1이 list2의 요소를 모두 갖고 있는가? true/false
+	- get(int) : 위치 검색
+	- set(int, Obj) : 특정 위치에 있는 객체 변경
+	- subList(int, int) : 지정한 인덱스를 새로운 리스트로 생성
+	- toArray() : ArrayList의 객체 배열을 반환
+	- isEmpty() : 비어있는지
+	- trimToSize : 빈공간 제거
+	- size : 저장된 객체의 개수 반환.
+	
+
+/jdk 설치경로/src.zip 에 소스파일 확인 가능. : 압축풀고 사용 가능.
+or ctrl+ 마우스 왼쪽.
+
+
+
+
+
+
+
