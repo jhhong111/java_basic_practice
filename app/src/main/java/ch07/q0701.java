@@ -5,20 +5,10 @@ class SutdaDeck {
   SutdaCard[] cards = new SutdaCard[CARD_NUM];
   SutdaDeck() {
     for (int i=0; i<CARD_NUM; i++) {
-      SutdaCard card = new SutdaCard();
-      int cardNum = i+1;
-      if (cardNum==1||cardNum==3||cardNum==8) {
-        card.num = cardNum;
-      } else if (cardNum>10) {
-        card.num = cardNum-10;
-        card.isKwang = false;
-      } else {
-        card.num = cardNum;
-        card.isKwang = false;
-      }
-      cards[i] = card;
+      int num = i%10+1;
+      boolean isKwang = (i<10 &&(num==1||num==3||num==8));
+      cards[i] = new SutdaCard(num, isKwang);
     }
-
   }
 }
 class SutdaCard {

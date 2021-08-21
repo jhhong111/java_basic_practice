@@ -3,9 +3,11 @@ package ch06;
 public class q0620 {
 
   static int[] shuffle(int[] arr) {
-
+    if (arr==null || arr.length==0) {
+      return arr;
+    }
     for (int i=0; i<arr.length; i++) {
-      int random = (int)(Math.random()*9);
+      int random = (int)(Math.random()*arr.length);
       int temp = arr[i];
       arr[i] = arr[random];
       arr[random] = temp;

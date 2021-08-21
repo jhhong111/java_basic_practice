@@ -5,6 +5,7 @@ class MyTv3 {
   int channel;
   int volume;
   int prevChannel;
+
   final int MAX_VOLUME = 100;
   final int MIN_VOLUME = 0;
   final int MAX_CHANNEL = 100;
@@ -25,9 +26,10 @@ class MyTv3 {
   }
 
   public void gotoPrevChannel() {
-    int temp = this.channel;
-    this.channel = this.prevChannel;
-    this.prevChannel = temp;
+    //    int temp = this.channel;
+    //    this.channel = this.prevChannel;
+    //    this.prevChannel = temp;
+    setChannel(prevChannel);
   }
 }
 

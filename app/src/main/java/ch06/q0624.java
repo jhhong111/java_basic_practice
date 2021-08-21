@@ -3,7 +3,7 @@ package ch06;
 public class q0624 {
 
   static int abs(int value) {
-    return Math.abs(value);
+    return (value <0 ? -value : value);
   }
 
   public static void main(String[] args)

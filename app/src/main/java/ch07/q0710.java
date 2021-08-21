@@ -13,12 +13,18 @@ class MyTv2 {
     return channel;
   }
   public void setChannel(int channel) {
+    if (channel>MAX_CHANNEL || channel<MIN_CHANNEL) {
+      return;
+    }
     this.channel = channel;
   }
   public int getVolume() {
     return volume;
   }
   public void setVolume(int volume) {
+    if (channel>MAX_VOLUME || channel<MIN_VOLUME) {
+      return;
+    }
     this.volume = volume;
   }
 }

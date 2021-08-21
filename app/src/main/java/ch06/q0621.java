@@ -10,11 +10,7 @@ class MyTv {
   final int MIN_CHANNEL = 1;
   void turnOnOff() {
     // (1) isPowerOn의 값이 true면 false로, false면 true로 바꾼다.
-    if (isPowerOn == true) {
-      isPowerOn = false;
-    } else {
-      isPowerOn = true;
-    }
+    isPowerOn = !isPowerOn;
   }
   void volumeUp() {
     //(2) volume의 값이 MAX_VOLUME보다 작을 때만 값을 1증가시킨다.

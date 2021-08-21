@@ -28,8 +28,7 @@ class Student {
   }
 
   float getAverage() {
-    float aver = (getTotal()/(float)3);
-    //return aver;
-    return (Math.round(aver*10)/10.0f);
+    return (Math.round(getTotal()/3f*10)/10.0f);
+    // return (int) (getTotal() / 3f*10 + 0.5f) /10f;
   }
 }

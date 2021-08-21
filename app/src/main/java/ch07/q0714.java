@@ -1,18 +1,18 @@
 package ch07;
 
 class SutdaCard2 {
-  final int num;
-  final boolean isKwang;
+  final int NUM;
+  final boolean ISKWANG;
   SutdaCard2() {
     this(1, true);
   }
   SutdaCard2(int num, boolean isKwang) {
-    this.num = num;
-    this.isKwang = isKwang;
+    this.NUM = num;
+    this.ISKWANG = isKwang;
   }
   @Override
   public String toString() {
-    return num + ( isKwang ? "K":"");
+    return NUM + ( ISKWANG ? "K":"");
   }
 }
 

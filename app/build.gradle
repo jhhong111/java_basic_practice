@@ -13,15 +13,9 @@ plugins {
     id 'eclipse'
 }
 
-eclipse {
-    project {
-        name = 'java_basic_practice'
-    }
-}
-
 repositories {
     // Use Maven Central for resolving dependencies.
-    mavenCentral() // https://repo.maven.apache.org/maven2 에서 다운로드
+    mavenCentral()
 }
 
 dependencies {
@@ -34,5 +28,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'com.eva.pms.App'
+    mainClass = 'java_basic_practice.App'
 }

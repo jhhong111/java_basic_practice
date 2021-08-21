@@ -5,18 +5,9 @@ class SutdaDeck1 {
   SutdaCard1[] cards = new SutdaCard1[CARD_NUM];
   SutdaDeck1() {
     for (int i=0; i<CARD_NUM; i++) {
-      SutdaCard1 card = new SutdaCard1();
-      int cardNum = i+1;
-      if (cardNum==1||cardNum==3||cardNum==8) {
-        card.num = cardNum;
-      } else if (cardNum>10) {
-        card.num = cardNum-10;
-        card.isKwang = false;
-      } else {
-        card.num = cardNum;
-        card.isKwang = false;
-      }
-      cards[i] = card;
+      int num = i%10+1;
+      boolean isKwang = i<10&&(num==1||num==3||num==8);
+      cards[i] = new SutdaCard1(num, isKwang);
     }
   }
   void shuffle() {
@@ -28,10 +19,13 @@ class SutdaDeck1 {
     }
   }
   SutdaCard1 pick(int index) {
+    if (index<0 || index>=cards.length) {
+      return null;
+    }
     return cards[index];
   }
   SutdaCard1 pick() {
-    return cards[(int)(Math.random()*20)];
+    return pick((int)(Math.random()*cards.length));
   }
 }
 class SutdaCard1 {

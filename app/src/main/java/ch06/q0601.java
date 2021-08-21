@@ -21,15 +21,10 @@ class SutdaCard {
   }
 
   SutdaCard() {
-    this.num = 1;
-    this.isKwang = true;
+    this(1, true);
   }
 
   String info() {
-    if (this.isKwang == true) {
-      return this.num + "K";
-    } else {
-      return this.num + "";
-    }
+    return num + (isKwang ? "K" : "");
   }
 }
