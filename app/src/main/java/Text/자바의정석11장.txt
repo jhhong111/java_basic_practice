@@ -1,10 +1,8 @@
-선영 16500원
+각 14350원+ 2200 : 16500
++3700 : 18000원
 나머지 18000
 
 Ch11
-
-
-
 1~2장
 컬렉션프레임웍과 핵심 인터페이스 (119강)
 
@@ -88,10 +86,48 @@ ArrayList (121강)
 
 /jdk 설치경로/src.zip 에 소스파일 확인 가능. : 압축풀고 사용 가능.
 or ctrl+ 마우스 왼쪽.
+ctrl+O : 사용할 수 있는 메서드 나옴.
 
 
 
+12~14장
+LinkedList (122강)
 
 
 
+15~18장
+Stack, Queue (123강)
 
+* Stack : 배열이라 new로 생성 가능.
+Stack.Method
+	- boolean empty() : 비어있는지 확인
+	- peek() : 맨 위에 뭐가 있는지 확인
+	- pop() : 맨 위에 객체를 꺼냄.
+	- push() : stack에 객체를 저장
+	- int search() : 주어진 객체를 찾아서 위치를 반환/ 못찾으면 -1
+		(배열과 달리 위치가 0이 아닌 1부터 시작)
+
+* Queue는 인터페이스므로 new 로 생성 불가
+Queue.Method
+	- boolean add() : 예외 발생
+	- remove() : 객체가 없으면 예외발생
+	- element() : peek과 같이 요소 읽는데 예외 발생
+	- poll() : 삭제 / null 반환
+	- offer(객체) : 추가 / Queue에 객체를 저장
+	- peek : 확인 / 비어있으면 null 반환
+
+? 그럼 어떻게 Queue를 사용할까?
+1) Queue를 직접 구현
+2) Queue를 구현한 클래스를 사용
+	-> API에서 검색. All Known Implementing class 는 Queue를 구현한 클래스들이다.
+	-> LinkedList가 그중 하나이므로 Queue를 구현할때 LinkedList를 이용함.
+
+
+
+11~19장
+스텍과 큐(Stack & Queue) 의 활용 (124강)
+
+스텍의 활용 예) 수식계산, 수식괄호검사, 워드의 undo/redo, 웹브라우저 뒤/앞
+큐의 활용 예) 최근사용문서
+
+.trim() : 앞뒤에 공백이 있으면 삭제.
